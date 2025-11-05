@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/aLeer.io/static/css/main.07cc844f.css",
+    "main.js": "/aLeer.io/static/js/main.24d00bba.js",
+    "index.html": "/aLeer.io/index.html",
+    "main.07cc844f.css.map": "/aLeer.io/static/css/main.07cc844f.css.map",
+    "main.24d00bba.js.map": "/aLeer.io/static/js/main.24d00bba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07cc844f.css",
+    "static/js/main.24d00bba.js"
+  ]
+}

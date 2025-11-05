@@ -1,0 +1,205 @@
+/* ===== ESTILO GENERAL ===== */
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: system-ui, Arial, sans-serif;
+  background: #0b0b0d;
+  color: #ffffff;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: background 0.6s ease;
+}
+
+/* ===== LOGO ===== */
+.corner-logo {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 25vw;
+  height: auto;
+  opacity: 0.85;
+  z-index: 1000;
+  max-width: 150px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.app.reading .corner-logo {
+  opacity: 0.2;
+  transform: scale(0.8);
+}
+
+/* ===== ENCABEZADO ===== */
+.header {
+  text-align: center;
+  margin: 10px 0;
+  transition: opacity 0.4s ease;
+}
+
+.app.reading .header {
+  opacity: 0;
+}
+
+/* ===== CONTROLES ===== */
+.controls {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.app.reading .controls {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+/* ===== TEXTAREA ===== */
+textarea {
+  width: 90%;
+  max-width: 600px;
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 8px;
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* ===== BOTONES ===== */
+button {
+  background: #1f2937;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 0 4px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background: #374151;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* ===== CONTROL DE VELOCIDAD ===== */
+.speed-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.4s ease;
+}
+
+/* ===== ZONA DE PALABRAS ===== */
+.viewer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== ANIMACIÓN DE APARICIÓN DE PALABRAS ===== */
+@keyframes fadeInWord {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.word {
+  font-size: calc(32px + 4vw);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 2px;
+  transition: transform 0.4s ease;
+  animation: fadeInWord 0.5s ease;
+}
+
+.app.reading .word {
+  transform: scale(1.1);
+}
+
+/* ===== LETRA CENTRAL ===== */
+.center-letter {
+  background: #ffd54f;
+  color: #222;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+.meta {
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  padding: 8px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  transition: opacity 0.4s ease;
+}
+
+.app.reading .meta {
+  opacity: 0;
+}
+/* === Animación de aparición de palabra === */
+@keyframes fadeInWord {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* === Animación de parpadeo de la letra central === */
+@keyframes glowCenter {
+  0% {
+    background-color: #ffd54f;
+    color: #222;
+    text-shadow: 0 0 4px #ffeb3b;
+  }
+  50% {
+    background-color: #ffeb3b;
+    color: #111;
+    text-shadow: 0 0 12px #fff176;
+  }
+  100% {
+    background-color: #ffd54f;
+    color: #222;
+    text-shadow: 0 0 4px #ffeb3b;
+  }
+}
+
+/* === Aplicar animaciones === */
+.word-animated {
+  font-size: calc(40px + 3vw);
+  font-weight: 600;
+  line-height: 1.2;
+  animation: fadeInWord 0.5s ease;
+}
+
+.center-letter {
+  animation: glowCenter 1s ease-in-out infinite;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
