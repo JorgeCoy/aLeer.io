@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/aLeer.io/static/css/main.07cc844f.css",
+    "main.js": "/aLeer.io/static/js/main.19fc1132.js",
+    "static/js/146.8119b6d3.chunk.js": "/aLeer.io/static/js/146.8119b6d3.chunk.js",
+    "index.html": "/aLeer.io/index.html",
+    "main.07cc844f.css.map": "/aLeer.io/static/css/main.07cc844f.css.map",
+    "main.19fc1132.js.map": "/aLeer.io/static/js/main.19fc1132.js.map",
+    "146.8119b6d3.chunk.js.map": "/aLeer.io/static/js/146.8119b6d3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07cc844f.css",
+    "static/js/main.19fc1132.js"
+  ]
+}
